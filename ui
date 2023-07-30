@@ -168,7 +168,10 @@ function library:CreateWatermark(name, position)
             watermark.label.Text = " " .. name:gsub("{fps}", "0 FPS"):gsub("{time}", "00:00:00") .. " "
         end
 
-        if name:find("{fps}") then
+        if name:find("{fps}") and name:find("{time}") then
+            local hr = os.date("%H")
+            local mn = os.date("%M")
+            local sc = os.date("%S")
             local currentTime = os.clock()
             counter = counter + 1
             if currentTime - startTime >= 1 then 
@@ -177,30 +180,17 @@ function library:CreateWatermark(name, position)
                 startTime = currentTime
 
                 if fps ~= oldfps then
-                    watermark.label.Text = " " .. name:gsub("{fps}", fps .. " FPS"):gsub("{time}", "00:00:00") .. " "
+                    watermark.label.Text = " " .. name:gsub("{fps}", fps .. " FPS"):gsub("{time}", "".. hr ..":".. mn ..":".. sc .."") .. " "
         
-                    watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+10, 0, 25)
+                    watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+12, 0, 25)
                     watermark.mainbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 25)
                     watermark.topbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 1)
 
-                    watermark.Outline.Size = watermark.mainbar.Size + UDim2.fromOffset(2, 2)
-                    watermark.BlackOutline.Size = watermark.mainbar.Size + UDim2.fromOffset(4, 4)
+                    watermark.Outline.Size = watermark.mainbar.Size + UDim2.fromOffset(4, 4)
+                    watermark.BlackOutline.Size = watermark.mainbar.Size + UDim2.fromOffset(6, 6)
                 end
                 oldfps = fps
             end
-        elseif name:find("{time}") then
-            local hr = os.date("%H")
-            local mn = os.date("%M")
-            local sc = os.date("%S")
-            
-            watermark.label.Text = " " .. name:gsub("{fps}", "0 FPS"):gsub("{time}", "".. hr ..":".. mn ..":"..sc .."") .. " "
-            
-            watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+12, 0, 25)
-            watermark.mainbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 25)
-            watermark.topbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 1)
-
-            watermark.Outline.Size = watermark.mainbar.Size + UDim2.fromOffset(4, 4)
-            watermark.BlackOutline.Size = watermark.mainbar.Size + UDim2.fromOffset(6, 6)
         end
     end)
 
