@@ -1,3 +1,4 @@
+-- insert troll face, memcorruptv2
 local library = { 
 	flags = { }, 
 	items = { } 
@@ -167,7 +168,7 @@ function library:CreateWatermark(name, position)
             watermark.label.Text = " " .. name:gsub("{fps}", "0 FPS"):gsub("{time}", "00:00:00") .. " "
         end
 
-        if name:find("{fps}") and not name:find("{time}") then
+        if name:find("{fps}") then
             local currentTime = os.clock()
             counter = counter + 1
             if currentTime - startTime >= 1 then 
