@@ -1669,9 +1669,8 @@ do
           Name = self.window_id,
           ResetOnSpawn = false,
           DisplayOrder = 0,
-          Parent = game:GetService("CoreGui")
+          Parent = gethui()
         })
-        syn.protect_gui(self.window)
         self.position = position
         self.size = size
         self.title = title
