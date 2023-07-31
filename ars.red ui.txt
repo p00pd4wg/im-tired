@@ -11,16 +11,6 @@ local assets = {
   slider_location = "rbxassetid://14258693372",
   transparent_pattern = "rbxassetid://14258696896"
 }
-for id, asset in next,assets do
-  local path = "ars_cache/asset_" .. tostring(id) .. ".png"
-  if not isfolder("ars_cache") then
-    makefolder("ars_cache")
-  end
-  if not isfile(path) then
-    writefile(path, asset)
-  end
-  assets[id] = path
-end
 local library
 do
   local _class_0
