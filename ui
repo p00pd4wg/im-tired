@@ -166,7 +166,7 @@ function library:CreateWatermark(name, position)
             watermark.BlackOutline.Visible = watermark.Visible
 
             if not name:find("{time}") then
-                watermark.label.Text = " " .. name:gsub("{fps}", "0 FPS"):gsub("{time}", "00:00:00") .. " "
+                watermark.label.Text = " " .. name:gsub("{game}", gamename):gsub("{time}", "00:00:00") .. " "
             end
         
             if name:find("{time}") then
