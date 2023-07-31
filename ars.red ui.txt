@@ -3,13 +3,13 @@ generate_guid = function()
   return game:GetService("HttpService"):GenerateGUID(false)
 end
 local assets = {
-  square = "rbxassetid://14258667487",
-  checkmark = "rbxassetid://14258672057",
-  triangle = "rbxassetiid://14258676524",
-  colorpicker = "rbxassetid://14258680945",
-  colorpicker_location = "rbxassetid://14258689435",
-  slider_location = "rbxassetid://14258693357",
-  transparent_pattern = "rbxassetid://14258696877"
+  square = "rbxassetid://14258667516",
+  checkmark = "rbxassetid://14258672089",
+  triangle = "rbxassetiid://14258676543",
+  colorpicker = "rbxassetid://14258680971",
+  colorpicker_location = "rbxassetid://14258689448",
+  slider_location = "rbxassetid://14258693372",
+  transparent_pattern = "rbxassetid://14258696896"
 }
 for id, asset in next,assets do
   local path = "ars_cache/asset_" .. tostring(id) .. ".png"
