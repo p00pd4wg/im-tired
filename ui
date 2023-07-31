@@ -75,7 +75,7 @@ function library:CreateWatermark(name, position)
     local gamename = marketplaceservice:GetProductInfo(game.PlaceId).Name
     local watermark = { }
     watermark.Visible = true
-    watermark.text = " " .. name:gsub("{game}", game):gsub("{time}", "00:00:00") .. " "
+    watermark.text = " " .. name:gsub("{game}", gamename):gsub("{time}", "00:00:00") .. " "
 
     watermark.main = Instance.new("ScreenGui")
     watermark.main.Name = "Watermark"
