@@ -18,7 +18,7 @@ if ProtectGui then
 elseif gethui then
     ScreenGui.Parent = gethui()
 else
-    ScreenGui.Parent = cloneref()
+    ScreenGui.Parent = cloneref(CoreGui)
 end
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 
