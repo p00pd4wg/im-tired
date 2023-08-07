@@ -31,6 +31,7 @@ mad_paste_lol = {
     ['Ping Pong'] = game:GetService('ReplicatedStorage').GeneralHit,
     ['Whirlwind'] = game:GetService('ReplicatedStorage').GeneralHit,
     ['fish'] = game:GetService('ReplicatedStorage').GeneralHit,
+    ['Hammer'] = game:GetService('ReplicatedStorage').GeneralHit,
     
     ['Diamond'] = game:GetService('ReplicatedStorage').DiamondHit,
     ['ZZZZZZZ'] = game:GetService('ReplicatedStorage').ZZZZZZZHit,
