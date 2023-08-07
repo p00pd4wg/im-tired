@@ -1,4 +1,4 @@
-mad.paste_lol = {
+mad_paste_lol = {
     
     ["Default"] = game:GetService('ReplicatedStorage').b,
     ["Extended"] = game:GetService('ReplicatedStorage').b,
