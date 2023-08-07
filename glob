@@ -55,6 +55,7 @@ mad_paste_lol = {
     ['Boomerang'] = game:GetService('ReplicatedStorage').BoomerangH,
     ['Dream'] = game:GetService('ReplicatedStorage').Dreamhit,
     ['Mail'] = game:GetService('ReplicatedStorage').MailHit,
+    ['Golden'] = game:GetService('ReplicatedStorage').GoldenHit,
     ['Cheeky'] = game:GetService('ReplicatedStorage').CheekyHit,
     ['Reaper'] = game:GetService('ReplicatedStorage').ReaperHit,
     ['Defense'] = game:GetService('ReplicatedStorage').DefenseHit,
