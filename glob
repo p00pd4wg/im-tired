@@ -105,6 +105,8 @@ mad_paste_lol = {
     ["Dominance"] = game.ReplicatedStorage.DominanceHit,
     ["Link"] = game.ReplicatedStorage.LinkHit,
     ["Custom"] = game.ReplicatedStorage.CustomHit,
+    ["Replica"] = game.ReplicatedStorage.ReplicaHit,
+    ["Retro"] = game.ReplicatedStorage.RetroHit,
     
     ----------------------------------------
 
