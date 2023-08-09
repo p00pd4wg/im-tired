@@ -1,9 +1,6 @@
 mad_paste_lol = {
-    
     ["Default"] = game.ReplicatedStorage.b,
     ["Extended"] = game.ReplicatedStorage.b,
-    
-    ----------------------------------------
      
     ["T H I C K"] = game.ReplicatedStorage.GeneralHit,
     ["Squid"] = game.ReplicatedStorage.GeneralHit,
@@ -34,8 +31,7 @@ mad_paste_lol = {
     ["Whirlwind"] = game.ReplicatedStorage.GeneralHit,
     ["fish"] = game.ReplicatedStorage.GeneralHit,
     ["Hammer"] = game.ReplicatedStorage.GeneralHit,
-    
-    ----------------------------------------
+    ["Psycho"] = game.ReplicatedStorage.GeneralHit,
     
     ["Diamond"] = game.ReplicatedStorage.DiamondHit,
     ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
@@ -107,24 +103,18 @@ mad_paste_lol = {
     ["Custom"] = game.ReplicatedStorage.CustomHit,
     ["Replica"] = game.ReplicatedStorage.ReplicaHit,
     ["Retro"] = game.ReplicatedStorage.RetroHit,
-    
-    ----------------------------------------
 
     ["Sparky"] = game.ReplicatedStorage.HtStun,
     ["Boogie"] = game.ReplicatedStorage.HtStun,
     ["Stun"] = game.ReplicatedStorage.HtStun,
     ["Coil"] = game.ReplicatedStorage.HtStun,
-
-    ----------------------------------------
+    ["Recall"] = game.ReplicatedStorage.HtStun,
     
     ["Mitten"] = game.ReplicatedStorage.MittenHit,
     ["Hallow Jack"] = game.ReplicatedStorage.HallowHIT,
-
-    ----------------------------------------
     
     ["OVERKILL"] = game.ReplicatedStorage.Overkillhit,
     ["The Flex"] = game.ReplicatedStorage.FlexHit,
     ["God's Hand"] = game.ReplicatedStorage.Godshand,
     ["Error"] = game.ReplicatedStorage.Errorhit
-    
 }
