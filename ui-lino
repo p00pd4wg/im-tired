@@ -51,26 +51,6 @@ local Library = {
     ScreenGui = ScreenGui;
 };
 
-local RainbowStep = 0
-local Hue = 0
-
-table.insert(Library.Signals, RenderStepped:Connect(function(Delta)
-    RainbowStep = RainbowStep + Delta
-
-    if RainbowStep >= (1 / 60) then
-        RainbowStep = 0
-
-        Hue = Hue + (1 / 400);
-
-        if Hue > 1 then
-            Hue = 0;
-        end;
-
-        Library.CurrentRainbowHue = Hue;
-        Library.CurrentRainbowColor = Color3.fromHSV(Hue, 0.8, 1);
-    end
-end))
-
 local function GetPlayersString()
     local PlayerList = Players:GetPlayers();
 
@@ -365,8 +345,6 @@ function Library:UpdateColorsUsingRegistry()
     -- that listens for the 'Visible' propert being changed.
     -- Visible: true => Add to active list, and call UpdateColors function
     -- Visible: false => Remove from active list.
-
-    -- The above would be especially efficient for a rainbow menu color or live color-changing.
 
     for Idx, Object in next, Library.Registry do
         for Property, ColorIdx in next, Object.Properties do
