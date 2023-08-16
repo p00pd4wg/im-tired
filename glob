@@ -32,6 +32,7 @@ mad_paste_lol = {
     ["fish"] = game.ReplicatedStorage.GeneralHit,
     ["Hammer"] = game.ReplicatedStorage.GeneralHit,
     ["Psycho"] = game.ReplicatedStorage.GeneralHit,
+    ["Counter"] = game.ReplicatedStorage.GeneralHit,
     
     ["Diamond"] = game.ReplicatedStorage.DiamondHit,
     ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
