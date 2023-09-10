@@ -8,9 +8,13 @@ local Mouse = LocalPlayer:GetMouse();
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
 local ScreenGui = Instance.new('ScreenGui');
-ProtectGui(ScreenGui);
+if ProtectGui then
+    ProtectGui(ScreenGui);
+    ScreenGui.Parent = cloneref(CoreGui);
+elseif gethui then
+    ScreenGui.Parent = gethui();
+end
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-ScreenGui.Parent = cloneref(CoreGui);
 
 local Toggles = {};
 local Options = {};
