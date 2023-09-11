@@ -105,6 +105,7 @@ mad_paste_lol = {
     ["Replica"] = game.ReplicatedStorage.ReplicaHit,
     ["Retro"] = game.ReplicatedStorage.RetroHit,
     ["Thor"] = game.ReplicatedStorage.ThorHit,
+    ["Cloud"] = game.ReplicatedStorage.CloudHit,
 
     ["Sparky"] = game.ReplicatedStorage.HtStun,
     ["Boogie"] = game.ReplicatedStorage.HtStun,
