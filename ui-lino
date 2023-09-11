@@ -12,14 +12,7 @@ local Mouse = LocalPlayer:GetMouse();
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
 local ScreenGui = Instance.new('ScreenGui');
-if ProtectGui then
-    ProtectGui(ScreenGui)
-    ScreenGui.Parent = cloneref(CoreGui)
-elseif gethui then
-    ScreenGui.Parent = gethui()
-else
-    ScreenGui.Parent = cloneref(CoreGui)
-end
+ScreenGui.Parent = cloneref(CoreGui)
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 
 local Toggles = {};
@@ -3052,7 +3045,7 @@ function Library:CreateWindow(...)
         local TabButton = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 10 + 10, 1, 0);
+            Size = UDim2.new(0, TabButtonWidth + 8 + 4, 1, 0);
             ZIndex = 1;
             Parent = TabArea;
         });
