@@ -12,7 +12,14 @@ local Mouse = LocalPlayer:GetMouse();
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
 local ScreenGui = Instance.new('ScreenGui');
-ScreenGui.Parent = cloneref(CoreGui)
+if ProtectGui then
+    ProtectGui(ScreenGui)
+    ScreenGui.Parent = cloneref(CoreGui)
+elseif gethui then
+    ScreenGui.Parent = gethui()
+else
+    ScreenGui.Parent = cloneref(CoreGui)
+end
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 
 local Toggles = {};
@@ -3002,8 +3009,8 @@ function Library:CreateWindow(...)
 
     local TabArea = Library:Create('Frame', {
         BackgroundTransparency = 1;
-        Position = UDim2.new(0, 8, 0, 8);
-        Size = UDim2.new(1, -16, 0, 21);
+        Position = UDim2.new(0, 8, 0, -1);
+        Size = UDim2.new(1, -16, 0, 30);
         ZIndex = 1;
         Parent = MainSectionInner;
     });
@@ -3011,6 +3018,7 @@ function Library:CreateWindow(...)
     local TabListLayout = Library:Create('UIListLayout', {
         Padding = UDim.new(0, Config.TabPadding);
         FillDirection = Enum.FillDirection.Horizontal;
+        HorizontalAlignment = Enum.HorizontalAlignment.Center;
         SortOrder = Enum.SortOrder.LayoutOrder;
         Parent = TabArea;
     });
@@ -3045,7 +3053,7 @@ function Library:CreateWindow(...)
         local TabButton = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 8 + 4, 1, 0);
+            Size = UDim2.new(0, TabButtonWidth + 8 + 4, 2, 0);
             ZIndex = 1;
             Parent = TabArea;
         });
@@ -3304,7 +3312,7 @@ function Library:CreateWindow(...)
             local TabboxButtons = Library:Create('Frame', {
                 BackgroundTransparency = 1;
                 Position = UDim2.new(0, 0, 0, 1);
-                Size = UDim2.new(1, 0, 0, 24);
+                Size = UDim2.new(1, 0, 0, 18);
                 ZIndex = 5;
                 Parent = BoxInner;
             });
