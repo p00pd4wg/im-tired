@@ -33,6 +33,10 @@ mad_paste_lol = {
     ["Hammer"] = game.ReplicatedStorage.GeneralHit,
     ["Psycho"] = game.ReplicatedStorage.GeneralHit,
     ["Counter"] = game.ReplicatedStorage.GeneralHit,
+    ["Slicer"] = game.ReplicatedStorage.GeneralHit,
+    ["Gravity"] = game.ReplicatedStorage.GeneralHit,
+    ["Excavator"] = game.ReplicatedStorage.GeneralHit,
+    ["Home Run"] = game.ReplicatedStorage.GeneralHit,
     
     ["Diamond"] = game.ReplicatedStorage.DiamondHit,
     ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
@@ -106,6 +110,7 @@ mad_paste_lol = {
     ["Retro"] = game.ReplicatedStorage.RetroHit,
     ["Thor"] = game.ReplicatedStorage.ThorHit,
     ["Cloud"] = game.ReplicatedStorage.CloudHit,
+    ["Nightmare"] = game.ReplicatedStorage.nightmarehit,
 
     ["Sparky"] = game.ReplicatedStorage.HtStun,
     ["Boogie"] = game.ReplicatedStorage.HtStun,
