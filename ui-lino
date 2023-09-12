@@ -9,12 +9,13 @@ local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
 
-local ProtectGui = protectgui or (syn and syn.protect_gui);
+getgenv().ProtectGui = protectgui or (syn and syn.protect_gui) or (function(...) return ... end);
+getgenv().clonerefs = cloneref or function(...) return ... end;
 
 local ScreenGui = Instance.new('ScreenGui');
 if ProtectGui then
     ProtectGui(ScreenGui);
-    ScreenGui.Parent = cloneref(CoreGui);
+    ScreenGui.Parent = clonerefs(CoreGui);
 elseif gethui then
     ScreenGui.Parent = gethui();
 end
