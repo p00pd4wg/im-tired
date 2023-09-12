@@ -3053,7 +3053,7 @@ function Library:CreateWindow(...)
         local TabButton = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 10 + 8, 2, 0);
+            Size = UDim2.new(0, TabButtonWidth + 10 + 12, 2, 0);
             ZIndex = 1;
             Parent = TabArea;
         });
