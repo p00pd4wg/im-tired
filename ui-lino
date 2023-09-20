@@ -21,11 +21,8 @@ elseif gethui then
 end
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 
-local Toggles = {};
-local Options = {};
-
-getgenv().Toggles = Toggles;
-getgenv().Options = Options;
+getgenv().Toggles = {};
+getgenv().Options = {};
 
 local Library = {
     Registry = {};
