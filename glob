@@ -112,6 +112,7 @@ mad_paste_lol = {
     ["Cloud"] = game.ReplicatedStorage.CloudHit,
     ["Nightmare"] = game.ReplicatedStorage.nightmarehit,
     ["spin"] = game.ReplicatedStorage.spinhit,
+    ["Null"] = game.ReplicatedStorage.NullHit,
 
     ["Sparky"] = game.ReplicatedStorage.HtStun,
     ["Boogie"] = game.ReplicatedStorage.HtStun,
