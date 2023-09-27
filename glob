@@ -1,4 +1,4 @@
-mad_paste_lol = {
+getgenv().mad_paste_lol = {
     ["Default"] = game.ReplicatedStorage.b,
     ["Extended"] = game.ReplicatedStorage.b,
      
@@ -40,6 +40,7 @@ mad_paste_lol = {
     ["Jebaited"] = game.ReplicatedStorage.GeneralHit,
     ["Meteor"] = game.ReplicatedStorage.GeneralHit,
     ["Tinkerer"] = game.ReplicatedStorage.GeneralHit,
+    ["Guardian Angel"] = game.ReplicatedStorage.GeneralHit,
     
     ["Diamond"] = game.ReplicatedStorage.DiamondHit,
     ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
