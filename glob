@@ -117,6 +117,7 @@ getgenv().mad_paste_lol = {
     ["Nightmare"] = game.ReplicatedStorage.nightmarehit,
     ["spin"] = game.ReplicatedStorage.spinhit,
     ["Null"] = game.ReplicatedStorage.NullHit,
+    ["Rhythm"] = game.ReplicatedStorage.rhythmhit,
 
     ["Sparky"] = game.ReplicatedStorage.HtStun,
     ["Boogie"] = game.ReplicatedStorage.HtStun,
