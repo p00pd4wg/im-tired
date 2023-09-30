@@ -3153,8 +3153,8 @@ function Library:CreateWindow(...)
 
         function Tab:HideTab()
             Blocker.BackgroundTransparency = 1;
-            Blocker.BackgroundColor3 = Library.BackgroundColor;
-            Library.RegistryMap[Blocker].Properties.BackgroundColor3 = 'BackgroundColor';
+            Blocker.BackgroundColor3 = Library.MainColor;
+            Library.RegistryMap[Blocker].Properties.BackgroundColor3 = 'MainColor';
             TabButton.BackgroundColor3 = Library.BackgroundColor;
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = 'BackgroundColor';
             TabFrame.Visible = false;
