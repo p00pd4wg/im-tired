@@ -3048,7 +3048,7 @@ function Library:CreateWindow(...)
             BackgroundColor3 = Library.BackgroundColor;
             BackgroundTransparency = 1;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 8, 2, 0);
+            Size = UDim2.new(0, TabButtonWidth + 8, 1, 0);
             ZIndex = 1;
             Parent = TabArea;
         });
