@@ -42,6 +42,8 @@ getgenv().mad_paste_lol = {
     ["Tinkerer"] = game.ReplicatedStorage.GeneralHit,
     ["Guardian Angel"] = game.ReplicatedStorage.GeneralHit,
     ["Sun"] = game.ReplicatedStorage.GeneralHit,
+    ["Necromancer"] = game.ReplicatedStorage.GeneralHit,
+    ["Zombie"] = game.ReplicatedStorage.GeneralHit,
     
     ["Diamond"] = game.ReplicatedStorage.DiamondHit,
     ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
