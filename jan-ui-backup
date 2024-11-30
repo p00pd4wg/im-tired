@@ -1,11 +1,11 @@
--- Modified support for Krnl and others
-
---LIBRARY START
+local function gserv(serv)
+	return cloneref(game:GetService(serv))
+end
 --Services
-getgenv().runService = game:GetService"RunService"
-getgenv().textService = game:GetService"TextService"
-getgenv().inputService = game:GetService"UserInputService"
-getgenv().tweenService = game:GetService"TweenService"
+getgenv().runService = gserv("RunService")
+getgenv().textService = gserv("TextService")
+getgenv().inputService = gserv("UserInputService")
+getgenv().tweenService = gserv("TweenService")
 
 if getgenv().library then
     getgenv().library:Unload()
@@ -91,7 +91,7 @@ end
 
 function library:LoadConfig(config)
     if table.find(self:GetConfigs(), config) then
-        local Read, Config = pcall(function() return game:GetService"HttpService":JSONDecode(readfile(self.foldername .. "/" .. config .. self.fileext)) end)
+        local Read, Config = pcall(function() return gserv("HttpService"):JSONDecode(readfile(self.foldername .. "/" .. config .. self.fileext)) end)
         Config = Read and Config or {}
         for _, option in next, self.options do
             if option.hasInit then
@@ -119,7 +119,7 @@ end
 function library:SaveConfig(config)
     local Config = {}
     if table.find(self:GetConfigs(), config) then
-        Config = game:GetService"HttpService":JSONDecode(readfile(self.foldername .. "/" .. config .. self.fileext))
+        Config = gserv("HttpService"):JSONDecode(readfile(self.foldername .. "/" .. config .. self.fileext))
     end
     for _, option in next, self.options do
         if option.type ~= "button" and option.flag and not option.skipflag then
@@ -141,7 +141,7 @@ function library:SaveConfig(config)
             end
         end
     end
-    writefile(self.foldername .. "/" .. config .. self.fileext, game:GetService"HttpService":JSONEncode(Config))
+    writefile(self.foldername .. "/" .. config .. self.fileext, gserv("HttpService"):JSONEncode(Config))
 end
 
 function library:GetConfigs()
@@ -2450,12 +2450,7 @@ function library:Init()
     self.hasInit = true
 
     self.base = library:Create("ScreenGui", {IgnoreGuiInset = true, ZIndexBehavior = Enum.ZIndexBehavior.Global})
-    if runService:IsStudio() then
-        self.base.Parent = script.Parent.Parent
-    elseif syn then
-        pcall(function() self.base.RobloxLocked = true end)
-        self.base.Parent = game:GetService"CoreGui"
-    end
+    self.base.Parent = gserv("CoreGui")
 
     self.main = self:Create("ImageButton", {
         AutoButtonColor = false,
@@ -2666,8 +2661,8 @@ function library:Init()
 end
 
 local function promptLib()
-    local RunService = game:GetService("RunService")
-    local CoreGui = game:GetService("CoreGui")
+    local RunService = gserv("RunService")
+    local CoreGui = gserv("CoreGui")
 
     local ErrorPrompt = getrenv().require(CoreGui.RobloxGui.Modules.ErrorPrompt)
     local function NewScreen(ScreenName)
