@@ -2,8 +2,8 @@ local AllIDs = {}
 local foundAnything = ""
 local actualHour = os.date("!*t").hour
 local Deleted = false
-local S_T = game:GetService("TeleportService")
-local S_H = game:GetService("HttpService")
+local S_T = cloneref(game:GetService("TeleportService"))
+local S_H = cloneref(game:GetService("HttpService"))
 
 local File = pcall(function()
 	AllIDs = S_H:JSONDecode(readfile("server-hop-temp.json"))
